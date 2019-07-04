@@ -21,6 +21,9 @@
                 </li>
                 <li class="navbar-item"><a href="#" class="navbar-link">投稿する</a></li>
                 <li class="navbar-item"><a href="#" class="navbar-link">マイページ</a></li>
+                <li class="dropdown-item">
+                    <%= link_to 'Logout', logout_path, method: :delete %>
+                </li>
             </ul>
         </div>
     </nav>
