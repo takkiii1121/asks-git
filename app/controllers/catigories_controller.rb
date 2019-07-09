@@ -8,6 +8,7 @@ class CatigoriesController < ApplicationController
       redirect_to asks_path
     else
       render new_ask_path
+    end
   end
 
   def destroy
