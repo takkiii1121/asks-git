@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <div class="text-center mt-5 mb-5">
+            <h3>お悩み一覧</h3>
+        </div>
+        
+        <% @asks.each do |ask| %>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title mb-2"><%= ask.title %></h5>
+                    <p class="card-text"><%= ask.content %></p>
+                    <p class="card-text">カテゴリー：<%= ask.category.name %></p>
+                    <%= link_to '詳しく見る', ask_path(ask) %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
