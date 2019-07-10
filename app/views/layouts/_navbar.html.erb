@@ -11,14 +11,14 @@
         <div class="btn-group d-flex btn-group-lg　role="group">
                 <%= link_to 'お悩み一覧', asks_path, class: "btn btn-default btn-outline-info w-100", style: "height: 35px;" %>
                 
-                    <a href="#" class="dropdown-toggle btn btn-default btn-outline-info w-100", style="height: 35px;", data-toggle="dropdown" role="button">カテゴリー別にみる<span class="caret"></span></a>
-                    <div class="dropdown-menu" role="menu">
-                            <%= link_to '人間関係', ningens_path, class: 'dropdown-item btn-info' %>
-                            <%= link_to '受験', jukens_path, class: 'dropdown-item btn-info' %>
-                            <%= link_to '恋愛', renais_path, class: 'dropdown-item btn-info' %>
-                            <%= link_to '健康', kenkous_path, class: 'dropdown-item btn-info' %>
-                            <%= link_to 'その他', sonotas_path, class: 'dropdown-item btn-info' %>
-                    </div>
+                    <!--<a href="#" class="dropdown-toggle btn btn-default btn-outline-info w-100", style="height: 35px;", data-toggle="dropdown" role="button">カテゴリー別にみる<span class="caret"></span></a>-->
+                    <!--<div class="dropdown-menu" role="menu">-->
+                    <!--        <%= link_to '人間関係', ningens_path, class: 'dropdown-item btn-info' %>-->
+                    <!--        <%= link_to '受験', jukens_path, class: 'dropdown-item btn-info' %>-->
+                    <!--        <%= link_to '恋愛', renais_path, class: 'dropdown-item btn-info' %>-->
+                    <!--        <%= link_to '健康', kenkous_path, class: 'dropdown-item btn-info' %>-->
+                    <!--        <%= link_to 'その他', sonotas_path, class: 'dropdown-item btn-info' %>-->
+                    <!--</div>-->
                     
                 <%= link_to '投稿する', new_ask_path, class: "btn btn-default btn-outline-info w-100", style: "height: 35px;" %>
                 <%= link_to 'マイページ', user_path(current_user.id), class: "btn btn-default btn-outline-info w-100", style: "height: 35px;" %>

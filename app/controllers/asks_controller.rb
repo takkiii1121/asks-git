@@ -35,7 +35,7 @@ class AsksController < ApplicationController
   private
   
   def ask_params
-    params.require(:ask).permit(:title, :content, :category_id, :user_id)
+    params.require(:ask).permit(:title, :content, :user_id)
   end
   
   def correct_user

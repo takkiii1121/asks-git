@@ -13,7 +13,7 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text"><%= ask.content %></p>
-                    <p class="card-text">カテゴリー：<%= ask.category.name %></p>
+                    <!--<p class="card-text">カテゴリー：</p>-->
                     <%= link_to "Delete", ask, method: :delete, data: {confirm: "You sure?"}, class: 'btn btn-danger' %>
                 </div>
             </div>
