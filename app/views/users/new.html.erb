@@ -6,7 +6,13 @@
     <title>Asks</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
+    <style type="text/css">
+        .container-fluid {
+            background-color: #FAEBD7;
+            min-height: 700px;
+            max-height: 100%;
+        }
+    </style>
     <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -18,11 +24,13 @@
   </head>
 
   <body>
-    
+    <div class="text-center pt-5 pb-2 pb-2" style="background-color: #5bc0de; ">
+        <%= link_to 'Asks', root_path, style: "color: #fff; font-size: 30px; text-decoration: none;" %>
+    </div>
     <div class="container-fluid">
       <%= render 'layouts/flash_messages' %>
-      <div class="text-center mt-5 mb-5">
-          <h1>Sign up</h1>
+      <div class="text-center pt-5 mb-5">
+          <h2>Sign up</h2>
       </div>
       
       <div class="row">
@@ -48,9 +56,11 @@
                       <%= f.label :password_confirmation, 'Confirmation' %>
                       <%= f.password_field :password_confirmation, class: 'form-control' %>
                   </div>
-                  <%= f.submit 'Sign up', class: 'btn btn-primary' %>
+                  <div class="text-center">
+                    <%= f.submit 'Sign up', class: 'btn btn-primary' %>
+                  </div>
             <% end %>
-            <div class="mt-5 mb-5">
+            <div class="text-center mt-5 mb-5">
                 <p>登録済みの方はこちら</p>
                 <%= link_to 'Log in', login_path, class: 'btn btn-primary' %>
             </div>

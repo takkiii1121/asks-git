@@ -1,22 +1,18 @@
-<div class="text-center mt-5 mb-5">
+<div class="text-center pt-2 pb-1">
     <p>ようこそ、<%= @user.name %>さん</p>
 </div>
 <div class="text-center mb-5">
     <h3><%= @user.name %>さんのこれまでの投稿</h3>
 </div>
 <% @user.asks.each do |ask| %>
-    <div class="row">
-        <div class="col-sm-10 offset-sm-1 mb-3">
-            <div class="card">
-                <div class="card-head">
-                    <h3 class="card-title pt-2 pl-2 mb-2"><%= ask.title %></h3> 
-                </div>
+    
+            <div class="card mb-3">
                 <div class="card-body">
+                     <h5 class="card-title mb-2"><%= ask.title %></h5> 
                     <p class="card-text"><%= ask.content %></p>
                     <!--<p class="card-text">カテゴリー：</p>-->
-                    <%= link_to "Delete", ask, method: :delete, data: {confirm: "You sure?"}, class: 'btn btn-danger' %>
+                    <%= link_to "削除", ask, method: :delete, data: {confirm: "You sure?"}, class: 'btn btn-danger' %>
                 </div>
             </div>
-        </div>
-    </div>
+     
 <% end %>

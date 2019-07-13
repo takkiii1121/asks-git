@@ -6,7 +6,13 @@
     <title>Asks</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
+    <style type="text/css">
+        .container-fluid {
+            background-color: #FAEBD7;
+            min-height: 700px;
+            max-height: 100%;
+        }
+    </style>
     <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -18,7 +24,9 @@
   </head>
 
   <body>
-    
+    <div class="text-center pt-5 pb-2 pb-2" style="background-color: #5bc0de; ">
+        <%= link_to 'Asks', root_path, style: "color: #fff; font-size: 30px; text-decoration: none;" %>
+    </div>
     <div class="container-fluid">
         <% flash.each do |message_type, message| %>
             <div class="alert alert-<%= message_type %>">
@@ -26,8 +34,8 @@
             </div>
         <% end %>
 
-      <div class="text-center mt-5 mb-5">
-            <h1>Log in</h1>
+      <div class="text-center pt-5 mb-5">
+            <h2>Log in</h2>
         </div>
         
         <div class="row">
@@ -42,10 +50,12 @@
                         <%= f.label :password, 'Password' %>
                         <%= f.password_field :password, class: 'form-control' %>
                     </div>
-                    <%= f.submit 'Log in', class: 'btn btn-primary' %>
+                    <div class="text-center">
+                        <%= f.submit 'Log in', class: 'btn btn-primary' %>
+                    </div>
                 <% end %>
                 
-                <div class="mt-5 mb-5">
+                <div class="text-center mt-5 mb-5">
                     <p>ユーザ登録がまだの方はこちら</p>
                     <%= link_to 'Sign up', signup_path, class: 'btn btn-primary' %>
                 </div>
